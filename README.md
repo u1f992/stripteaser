@@ -1,4 +1,4 @@
-# stripteaser
+# Stripteaser
 
 Executes JavaScript and strips out all script tags in HTML.
 

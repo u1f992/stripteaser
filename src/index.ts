@@ -1,21 +1,19 @@
-#!/usr/bin/env node
+import { chromium } from "playwright";
 
-import { promises as fs } from "node:fs";
-
-import { Command } from "commander";
-
-import { stripScripts } from "./stripScripts.js";
-
-new Command()
-    .argument("<input>")
-    .argument("[output]")
-    .action(async (input: string, output: string) => {
-        const html = await fs.readFile(input, "utf-8");
-        const stripped = await stripScripts(html);
-        if (!output) {
-            console.log(stripped);
-        } else {
-            await fs.writeFile(output, stripped, "utf-8");
-        }
-    })
-    .parse();
+/**
+ * Executes JavaScript and strips out all script tags in the provided HTML string.
+ */
+export async function stripScripts(html: string): Promise<string> {
+    const browser = await chromium.launch();
+    try {
+        const page = await browser.newPage();
+        await page.setContent(html, { waitUntil: "networkidle" });
+        await page.evaluate(() => {
+            const scripts = document.querySelectorAll("script");
+            scripts.forEach(script => script.remove());
+        });
+        return await page.content();
+    } finally {
+        await browser.close();
+    }
+}
