@@ -1,10 +1,10 @@
 {
   "name": "@u1f992/stripteaser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "stripteaser": "./dist/index.js"
+    "stripteaser": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
