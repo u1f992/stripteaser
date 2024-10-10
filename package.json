@@ -10,7 +10,7 @@
     "build": "tsc",
     "test": "tsx src/index.ts test.html",
     "prepublish": "npm run build && npm pack",
-    "publish": "npm publish --access public && npm info @u1f992/stripteaser"
+    "publish": "npm publish --access public"
   },
   "keywords": [],
   "homepage": "https://github.com/u1f992/stripteaser",
