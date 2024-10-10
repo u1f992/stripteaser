@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "test": "tsx src/index.ts test.html",
-    "prepublish": "npm run build && npm pack",
+    "prepublish": "npm run build",
     "publish": "npm publish --access public"
   },
   "keywords": [],
