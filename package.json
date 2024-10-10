@@ -1,5 +1,5 @@
 {
-  "name": "stripteaser",
+  "name": "@u1f992/stripteaser",
   "version": "0.1.0",
   "main": "dist/index.js",
   "type": "module",
@@ -8,9 +8,12 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "tsx src/index.ts test.html"
+    "test": "tsx src/index.ts test.html",
+    "prepublish": "npm run build && npm pack",
+    "publish": "npm run prepublish && npm publish --access public && npm info @u1f992/stripteaser"
   },
   "keywords": [],
+  "homepage": "https://github.com/u1f992/stripteaser",
   "author": "Koutaro Mukai",
   "license": "GPL-3.0",
   "description": "Executes JavaScript and strips out all script tags in HTML.",
