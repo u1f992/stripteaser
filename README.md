@@ -27,5 +27,5 @@ Furthermore, even when using an existing browser for rendering, the problem is n
 ## Related resources
 
 - [print-css.rocks - PrintCSS CSS Paged Media tutorial and information](https://print-css.rocks/lessons)
-- [CSS Formatterの処理事例で考える、HTML文書からのJavaScript除去 ~前編~](https://youtu.be/YXJy4XIE8yg?si=0J6LbQAquJ8KU1Hx)/[~後編~](https://youtu.be/OEBQo1J83zA?si=VvzqQnDmlEeBdauu)
+- [CSS Formatterの処理事例で考える、HTML文書からのJavaScript除去 \~前編\~](https://youtu.be/YXJy4XIE8yg?si=0J6LbQAquJ8KU1Hx)/[\~後編\~](https://youtu.be/OEBQo1J83zA?si=VvzqQnDmlEeBdauu)
   - [HTML＋LaTeX から HTML＋SVG への変換 - Antenna House Formatter](https://www.antenna.co.jp/AHF/ahf_samples/LaTeXToSVG.html)
